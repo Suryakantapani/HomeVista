@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeVista Design Tool</title>
+  <link rel="stylesheet" href="Design.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Home<span>Vista</span></div>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="Explore.html">Explore</a>
+        <a href="Design.html">Design</a>
+        <a href="services.html">Services</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 id="sectionTitle">Room Dimensions</h1>
+
+    <div class="steps">
+      <div class="step active" data-step="dimensions">Room Dimensions</div>
+      <div class="step" data-step="style">Style & Theme</div>
+      <div class="step" data-step="furniture">Furniture & Layout</div>
+      <div class="step" data-step="color">Color Palette</div>
+      <div class="step" data-step="accessories">Accessories & Lighting</div>
+      <div class="step" data-step="preview">3D Preview</div>
+    </div>
+
+    <!-- Room Dimensions Section -->
+    <div id="dimensionsSection" class="active-section">
+      <div class="form-preview">
+        <div class="form-section">
+          <h2>Enter Room Dimensions</h2>
+          <p>Please enter the dimensions of your room to help us create an accurate design. All measurements should be in feet.</p>
+          
+          <div class="form-group">
+            <label for="width">Width (feet)</label>
+            <input type="number" id="width" placeholder="10" value="10">
+          </div>
+          
+          <div class="form-group">
+            <label for="length">Length (feet)</label>
+            <input type="number" id="length" placeholder="12" value="12">
+          </div>
+          
+          <div class="form-group">
+            <label for="height">Ceiling Height (feet)</label>
+            <input type="number" id="height" placeholder="9" value="9">
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <h2>Room Preview</h2>
+          <div class="room-box" id="roomPreview">10' × 12'</div>
+          <div class="info-box" id="roomInfo">
+            <p><strong>Room Size Information</strong></p>
+            <p>Dimensions: <span id="dimensions">10' × 12' × 9'</span></p>
+            <p>Floor Area: <span id="floorArea">120 sq ft</span></p>
+            <p>Wall Area: <span id="wallArea">396 sq ft</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Style & Theme Section -->
+<div id="styleSection" class="style-section">
+  <h2>Choose Your Style & Theme</h2>
+  <p>Select a design style that matches your taste and preferences. This will guide our recommendations for furniture, colors, and accessories.</p>
+  
+  <div class="style-options">
+    <!-- Modern -->
+    <div class="style-card" data-style="modern">
+      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb" alt="Modern interior design">
+      <h3>Modern</h3>
+      <p>Clean lines, minimal decoration, and focus on function.</p>
+    </div>
+    
+    <!-- Traditional Indian -->
+    <div class="style-card" data-style="traditional-indian">
+      <img src="https://images.unsplash.com/photo-1600566752225-3f0871d8a6a0" alt="Traditional Indian interior design">
+      <h3>Traditional Indian</h3>
+      <p>Rich colors, ornate details, and cultural elements.</p>
+    </div>
+    
+    <!-- Contemporary -->
+    <div class="style-card" data-style="contemporary">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="Contemporary interior design">
+      <h3>Contemporary</h3>
+      <p>Current trends with a blend of styles and comfort.</p>
+    </div>
+    
+    <!-- Scandinavian -->
+    <div class="style-card" data-style="scandinavian">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f" alt="Scandinavian interior design">
+      <h3>Scandinavian</h3>
+      <p>Light colors, natural materials, and cozy minimalism.</p>
+    </div>
+    
+    <!-- Industrial -->
+    <div class="style-card" data-style="industrial">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="Industrial interior design">
+      <h3>Industrial</h3>
+      <p>Raw materials, exposed structures, and urban feel.</p>
+    </div>
+    
+    <!-- Bohemian -->
+    <div class="style-card" data-style="bohemian">
+      <img src="https://images.unsplash.com/photo-1507652955-f3dcef5a3be5" alt="Bohemian interior design">
+      <h3>Bohemian</h3>
+      <p>Eclectic mix, vibrant colors, and layered textures.</p>
+    </div>
+    
+    <!-- Japandi -->
+    <div class="style-card" data-style="japandi">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="Japandi interior design">
+      <h3>Japandi</h3>
+      <p>Japanese minimalism meets Scandinavian functionality.</p>
+    </div>
+    
+    <!-- Coastal -->
+    <div class="style-card" data-style="coastal">
+      <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff" alt="Coastal interior design">
+      <h3>Coastal</h3>
+      <p>Light, airy spaces with nautical elements and blues.</p>
+    </div>
+    
+    <!-- Mid-Century -->
+    <div class="style-card" data-style="mid-century">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Mid-Century Modern interior design">
+      <h3>Mid-Century Modern</h3>
+      <p>Retro 1950s-60s style with organic curves and warm tones.</p>
+    </div>
+  </div>
+</div>
+    <!-- Furniture & Layout Section -->
+    <div id="furnitureSection" class="furniture-section">
+      <h2>Furniture & Layout</h2>
+      <p>Drag and position furniture in your room layout.</p>
+      
+      <div class="furniture-container">
+        <div class="furniture-controls">
+          <h3>Add Furniture</h3>
+          <p>Select a furniture item to edit its properties</p>
+          
+          <h3>Furniture List</h3>
+          <p>No furniture items added yet</p>
+        </div>
+        
+        <div class="furniture-room empty" id="furnitureRoom">
+          Drag furniture items here
+        </div>
+      </div>
+      
+      <div class="furniture-stats">
+        <p>Room Size: <span id="roomSizeDisplay">10' × 12'</span></p>
+        <p>Items: <span id="itemCount">0</span></p>
+      </div>
+    </div>
+
+    <!-- Color Palette Section -->
+    <div id="colorSection" class="color-section">
+      <h2>Choose Your Color Palette</h2>
+      <p>Select colors for different parts of your room to create the perfect ambiance.</p>
+      
+      <div class="color-tabs">
+        <div class="color-tab active" data-target="walls">Walls</div>
+        <div class="color-tab" data-target="floor">Floor</div>
+        <div class="color-tab" data-target="ceiling">Ceiling</div>
+      </div>
+      
+      <div class="color-preview" id="colorPreview">
+        Room Preview
+      </div>
+      
+      <div class="color-palette">
+        <div class="color-option" style="background-color: #f5f5f5;" data-color="Soft White">Soft White</div>
+        <div class="color-option" style="background-color: #e6d5b8;" data-color="Warm Beige">Warm Beige</div>
+        <div class="color-option" style="background-color: #d3d3d3;" data-color="Light Gray">Light Gray</div>
+        <div class="color-option" style="background-color: #b5d3e7;" data-color="Pale Blue">Pale Blue</div>
+        <div class="color-option" style="background-color: #b8c4b9;" data-color="Sage Green">Sage Green</div>
+        <div class="color-option" style="background-color: #f0e68c;" data-color="Muted Yellow">Muted Yellow</div>
+        <div class="color-option" style="background-color: #f4c2c2;" data-color="Blush Pink">Blush Pink</div>
+        <div class="color-option" style="background-color: #e6e6fa;" data-color="Soft Lavender">Soft Lavender</div>
+        <div class="color-option" style="background-color: #93e9be;" data-color="Seafoam">Seafoam</div>
+        <div class="color-option" style="background-color: #e2725b;" data-color="Terracotta">Terracotta</div>
+        <div class="color-option" style="background-color: #a0b5c8;" data-color="Dusty Blue">Dusty Blue</div>
+        <div class="color-option" style="background-color: #000080; color: white;" data-color="Deep Navy">Deep Navy</div>
+      </div>
+      
+      <div class="custom-color">
+        <label>Custom Color</label>
+        <input type="text" placeholder="HEX Code" id="customColor">
+      </div>
+      
+      <div class="selected-colors">
+        <p><strong>Selected Colors</strong></p>
+        <p id="wallsColor">Walls: Not selected</p>
+        <p id="floorColor">Floor: Not selected</p>
+        <p id="ceilingColor">Ceiling: Not selected</p>
+      </div>
+    </div>
+
+    <!-- Accessories & Lighting Section -->
+<div id="accessoriesSection" class="accessories-section">
+  <h2>Accessories & Lighting</h2>
+  <p class="section-description">Choose accessories and lighting to complete your room design. Mix and match to create your perfect space.</p>
+  
+  <div class="accessories-categories">
+    <button class="category-btn active" data-category="lighting">Lighting</button>
+    <button class="category-btn" data-category="decor">Wall Decor & Art</button>
+    <button class="category-btn" data-category="functional">Functional Items</button>
+    <button class="category-btn" data-category="textiles">Textiles</button>
+    <button class="category-btn" data-category="plants">Plants & Greenery</button>
+  </div>
+  
+  <div class="accessories-grid">
+    <!-- Lighting Category -->
+    <div class="accessory-card" data-category="lighting">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1559563458-527698bf5295" alt="Modern chandelier">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Modern Chandelier</h3>
+        <p class="price">$249.99</p>
+        <div class="rating">★★★★☆ (128)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <div class="accessory-card" data-category="lighting">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15" alt="Industrial pendant light">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Industrial Pendant</h3>
+        <p class="price">$179.99</p>
+        <div class="rating">★★★★★ (96)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <div class="accessory-card" data-category="lighting">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1580477667995-2b94f01c6836" alt="Modern floor lamp">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Arc Floor Lamp</h3>
+        <p class="price">$199.99</p>
+        <div class="rating">★★★★☆ (87)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <!-- Decor Category -->
+    <div class="accessory-card" data-category="decor">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458" alt="Abstract wall art">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Abstract Wall Art</h3>
+        <p class="price">$129.99</p>
+        <div class="rating">★★★★☆ (64)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <div class="accessory-card" data-category="decor">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a" alt="Decorative mirror">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Round Decorative Mirror</h3>
+        <p class="price">$159.99</p>
+        <div class="rating">★★★★★ (112)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <!-- Functional Category -->
+    <div class="accessory-card" data-category="functional">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a" alt="Decorative trays">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Marble Serving Trays</h3>
+        <p class="price">$49.99</p>
+        <div class="rating">★★★★☆ (78)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <!-- Textiles Category -->
+    <div class="accessory-card" data-category="textiles">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1575428652377-a2d80e2277fc" alt="Decorative throw pillows">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Velvet Throw Pillows</h3>
+        <p class="price">$39.99 each</p>
+        <div class="rating">★★★★★ (143)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+    
+    <!-- Plants Category -->
+    <div class="accessory-card" data-category="plants">
+      <div class="accessory-image">
+        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411" alt="Indoor plant">
+        <div class="quick-view">Quick View</div>
+      </div>
+      <div class="accessory-details">
+        <h3>Fiddle Leaf Fig Tree</h3>
+        <p class="price">$89.99</p>
+        <div class="rating">★★★★☆ (92)</div>
+        <button class="add-to-room-btn">+ Add to Room</button>
+      </div>
+    </div>
+  </div>
+  
+  <button class="view-more-btn">View More Accessories →</button>
+</div>
+ <div class="selected-items">
+        <h3>Selected Items</h3>
+        <div class="empty-state">
+          No items selected yet<br>
+          Choose accessories from the categories to enhance your room
+        </div>
+      </div>
+      
+      <div class="design-tips">
+        <h3>Design Tips</h3>
+        <ul>
+          <li>Layer different types of lighting for depth</li>
+          <li>Choose accessories that complement your color palette</li>
+          <li>Add plants for a touch of nature</li>
+          <li>Use mirrors to make the space feel larger</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3D Preview Section -->
+    <div id="preview3dSection" class="preview-3d-section">
+      <h2>Room Design Preview</h2>
+      <p>Here's a preview of your room design. You can now view it in 3D, make final adjustments, or proceed to get detailed specifications.</p>
+      
+      <div class="preview-3d-container">
+        <div class="preview-3d-canvas">
+          <div class="placeholder">
+            <p>3D Preview will be displayed here</p>
+            <p>In a real application, this would show an interactive 3D model of your room design</p>
+          </div>
+        </div>
+        
+        <div class="design-summary">
+          <h3>Design Summary</h3>
+          
+          <div class="summary-item">
+            <h4>Room Dimensions</h4>
+            <p id="summaryDimensions">10' × 12' × 9'</p>
+          </div>
+          
+          <div class="summary-item">
+            <h4>Style</h4>
+            <p id="summaryStyle">Modern</p>
+          </div>
+          
+          <div class="summary-item">
+            <h4>Color Scheme</h4>
+            <ul>
+              <li id="wallsSummary">Walls: Soft White</li>
+              <li id="floorSummary">Floor: Warm Beige</li>
+              <li id="ceilingSummary">Ceiling: Light Gray</li>
+            </ul>
+          </div>
+          
+          <div class="summary-item">
+            <h4>Furniture (Count)</h4>
+            <p id="furnitureCount">3 pieces</p>
+          </div>
+          
+          <div class="summary-item">
+            <h4>Accessories (Count)</h4>
+            <p id="accessoriesCount">2 items</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="next-steps">
+        <h3>Next Steps</h3>
+        <ul>
+          <li>View your design in 3D for a more detailed look</li>
+          <li>Estimate the budget for your design</li>
+          <li>Consult with a professional designer for customization</li>
+          <li>Save this design to your projects</li>
+        </ul>
+      </div>
+      
+      <div class="action-buttons">
+        <button class="secondary-btn">
+          <span>📄</span> Download PDF
+        </button>
+        <button class="secondary-btn">
+          <span>↗️</span> Share Design
+        </button>
+        <button class="primary-btn">
+          <span>💾</span> Save Project
+        </button>
+        <button class="primary-btn">
+          <span>👁</span> View in 3D →
+        </button>
+      </div>
+    </div>
+
+    <div class="buttons-bar">
+      <button class="back-btn">← Previous</button>
+      <div class="right-buttons">
+        <button class="save">💾 Save Project</button>
+        <button class="preview">👁 Preview</button>
+        <button class="next">Next →</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // DOM Elements
+      const widthInput = document.getElementById('width');
+      const lengthInput = document.getElementById('length');
+      const heightInput = document.getElementById('height');
+      const roomPreview = document.getElementById('roomPreview');
+      const dimensionsSpan = document.getElementById('dimensions');
+      const floorAreaSpan = document.getElementById('floorArea');
+      const wallAreaSpan = document.getElementById('wallArea');
+      const nextBtn = document.querySelector('.next');
+      const prevBtn = document.querySelector('.back-btn');
+      const saveBtn = document.querySelector('.save');
+      const previewBtn = document.querySelector('.preview');
+      const steps = document.querySelectorAll('.step');
+      const sectionTitle = document.getElementById('sectionTitle');
+      const dimensionsSection = document.getElementById('dimensionsSection');
+      const styleSection = document.getElementById('styleSection');
+      const furnitureSection = document.getElementById('furnitureSection');
+      const colorSection = document.getElementById('colorSection');
+      const accessoriesSection = document.getElementById('accessoriesSection');
+      const preview3dSection = document.getElementById('preview3dSection');
+      const styleCards = document.querySelectorAll('.style-card');
+      const furnitureRoom = document.getElementById('furnitureRoom');
+      const roomSizeDisplay = document.getElementById('roomSizeDisplay');
+      const itemCount = document.getElementById('itemCount');
+      const colorTabs = document.querySelectorAll('.color-tab');
+      const colorOptions = document.querySelectorAll('.color-option');
+      const customColorInput = document.getElementById('customColor');
+      const colorPreview = document.getElementById('colorPreview');
+      const wallsColorDisplay = document.getElementById('wallsColor');
+      const floorColorDisplay = document.getElementById('floorColor');
+      const ceilingColorDisplay = document.getElementById('ceilingColor');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const addToRoomBtns = document.querySelectorAll('.add-to-room-btn');
+      
+      // Summary elements for 3D preview
+      const summaryDimensions = document.getElementById('summaryDimensions');
+      const summaryStyle = document.getElementById('summaryStyle');
+      const wallsSummary = document.getElementById('wallsSummary');
+      const floorSummary = document.getElementById('floorSummary');
+      const ceilingSummary = document.getElementById('ceilingSummary');
+      const furnitureCount = document.getElementById('furnitureCount');
+      const accessoriesCount = document.getElementById('accessoriesCount');
+      
+      // Current state
+      let currentStep = 'dimensions';
+      let selectedStyle = null;
+      let furnitureItems = [];
+      let selectedColors = {
+        walls: null,
+        floor: null,
+        ceiling: null
+      };
+      let currentColorTarget = 'walls';
+      let selectedAccessories = [];
+      let currentCategory = 'lighting';
+
+      // Initialize
+      updateRoomInfo();
+      setupEventListeners();
+
+      function setupEventListeners() {
+        // Room dimension inputs
+        widthInput.addEventListener('input', updateRoomInfo);
+        lengthInput.addEventListener('input', updateRoomInfo);
+        heightInput.addEventListener('input', updateRoomInfo);
+
+        // Style selection
+        styleCards.forEach(card => {
+          card.addEventListener('click', function() {
+            styleCards.forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedStyle = this.dataset.style;
+          });
+        });
+
+        // Navigation buttons
+        nextBtn.addEventListener('click', goToNextStep);
+        prevBtn.addEventListener('click', goToPreviousStep);
+        
+        // Save and preview
+        saveBtn.addEventListener('click', saveProject);
+        previewBtn.addEventListener('click', previewProject);
+        
+        // Step navigation
+        steps.forEach(step => {
+          step.addEventListener('click', function() {
+            if (!this.classList.contains('active')) {
+              goToStep(this.dataset.step);
+            }
+          });
+        });
+
+        // Furniture room setup
+        setupFurnitureRoom();
+
+        // Color palette setup
+        setupColorPalette();
+        
+        // Accessories setup
+        setupAccessories();
+      }
+
+      function updateRoomInfo() {
+        const width = parseFloat(widthInput.value) || 0;
+        const length = parseFloat(lengthInput.value) || 0;
+        const height = parseFloat(heightInput.value) || 0;
+
+        // Update preview box
+        roomPreview.textContent = `${width}' × ${length}'`;
+        roomSizeDisplay.textContent = `${width}' × ${length}'`;
+
+        // Calculate areas
+        const floorArea = width * length;
+        const wallArea = 2 * (width + length) * height;
+
+        // Update info box
+        dimensionsSpan.textContent = `${width}' × ${length}' × ${height}'`;
+        floorAreaSpan.textContent = `${floorArea.toFixed(2)} sq ft`;
+        wallAreaSpan.textContent = `${wallArea.toFixed(2)} sq ft`;
+      }
+
+      function setupFurnitureRoom() {
+        // Basic drag and drop functionality
+        furnitureRoom.addEventListener('dragover', function(e) {
+          e.preventDefault();
+        });
+
+        furnitureRoom.addEventListener('drop', function(e) {
+          e.preventDefault();
+          addFurnitureItem(e.clientX - this.getBoundingClientRect().left, 
+                          e.clientY - this.getBoundingClientRect().top);
+        });
+      }
+
+      function addFurnitureItem(x, y) {
+        const item = document.createElement('div');
+        item.className = 'furniture-item';
+        item.textContent = 'Furniture';
+        item.style.left = `${x - 40}px`;
+        item.style.top = `${y - 40}px`;
+        
+        // Make draggable
+        item.draggable = true;
+        item.addEventListener('dragstart', function(e) {
+          e.dataTransfer.setData('text/plain', ''); // Needed for Firefox
+          this.classList.add('dragging');
+        });
+        
+        item.addEventListener('dragend', function() {
+          this.classList.remove('dragging');
+        });
+        
+        furnitureRoom.appendChild(item);
+        furnitureRoom.classList.remove('empty');
+        
+        // Update count
+        furnitureItems.push(item);
+        itemCount.textContent = furnitureItems.length;
+      }
+
+      function setupColorPalette() {
+        // Color tab selection
+        colorTabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            colorTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            currentColorTarget = this.dataset.target;
+          });
+        });
+
+        // Color option selection
+        colorOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            const colorName = this.dataset.color;
+            const color = window.getComputedStyle(this).backgroundColor;
+            selectedColors[currentColorTarget] = { name: colorName, value: color };
+            updateColorDisplays();
+          });
+        });
+
+        // Custom color input
+        customColorInput.addEventListener('change', function() {
+          if (this.value) {
+            selectedColors[currentColorTarget] = { 
+              name: 'Custom', 
+              value: `#${this.value.replace('#', '')}`
+            };
+            updateColorDisplays();
+          }
+        });
+      }
+      
+      function setupAccessories() {
+        // Category selection
+        categoryBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentCategory = this.dataset.category;
+            // In a real app, you would filter accessories by category here
+          });
+        });
+        
+        // Add to room buttons
+        addToRoomBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const accessoryCard = this.closest('.accessory-card');
+            const accessoryName = accessoryCard.querySelector('h3').textContent;
+            
+            // Add to selected items
+            selectedAccessories.push(accessoryName);
+            
+            // Update UI (in a real app, you would show the selected items)
+            const emptyState = document.querySelector('.empty-state');
+            if (emptyState) {
+              emptyState.innerHTML = selectedAccessories.map(item => 
+                `<div>${item}</div>`
+              ).join('');
+            }
+          });
+        });
+      }
+
+      function updateColorDisplays() {
+        // Update selected colors display
+        wallsColorDisplay.textContent = `Walls: ${selectedColors.walls?.name || 'Not selected'}`;
+        floorColorDisplay.textContent = `Floor: ${selectedColors.floor?.name || 'Not selected'}`;
+        ceilingColorDisplay.textContent = `Ceiling: ${selectedColors.ceiling?.name || 'Not selected'}`;
+        
+        // Update preview (simplified - in a real app this would update the actual room preview)
+        if (selectedColors.walls) {
+          colorPreview.style.backgroundColor = selectedColors.walls.value;
+          colorPreview.style.color = getContrastColor(selectedColors.walls.value);
+        }
+      }
+
+      function getContrastColor(hexColor) {
+        // Simplified contrast calculation
+        const r = parseInt(hexColor.substr(1, 2), 16);
+        const g = parseInt(hexColor.substr(3, 2), 16);
+        const b = parseInt(hexColor.substr(5, 2), 16);
+        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+        return brightness > 128 ? '#000000' : '#ffffff';
+      }
+
+      function goToNextStep() {
+        switch(currentStep) {
+          case 'dimensions':
+            goToStep('style');
+            break;
+          case 'style':
+            goToStep('furniture');
+            break;
+          case 'furniture':
+            goToStep('color');
+            break;
+          case 'color':
+            goToStep('accessories');
+            break;
+          case 'accessories':
+            goToStep('preview');
+            break;
+          default:
+            goToStep('dimensions');
+        }
+      }
+
+      function goToPreviousStep() {
+        switch(currentStep) {
+          case 'style':
+            goToStep('dimensions');
+            break;
+          case 'furniture':
+            goToStep('style');
+            break;
+          case 'color':
+            goToStep('furniture');
+            break;
+          case 'accessories':
+            goToStep('color');
+            break;
+          case 'preview':
+            goToStep('accessories');
+            break;
+          default:
+            goToStep('dimensions');
+        }
+      }
+
+      function goToStep(step) {
+        // Update steps UI
+        steps.forEach(s => s.classList.remove('active'));
+        document.querySelector(`.step[data-step="${step}"]`).classList.add('active');
+        
+        // Update current step
+        currentStep = step;
+        
+        // Hide all sections
+        dimensionsSection.style.display = 'none';
+        styleSection.style.display = 'none';
+        furnitureSection.style.display = 'none';
+        colorSection.style.display = 'none';
+        accessoriesSection.style.display = 'none';
+        preview3dSection.style.display = 'none';
+        
+        // Update section title and show current section
+        switch(step) {
+          case 'dimensions':
+            sectionTitle.textContent = 'Room Dimensions';
+            dimensionsSection.style.display = 'block';
+            break;
+          case 'style':
+            sectionTitle.textContent = 'Style & Theme';
+            styleSection.style.display = 'block';
+            break;
+          case 'furniture':
+            sectionTitle.textContent = 'Furniture & Layout';
+            furnitureSection.style.display = 'block';
+            break;
+          case 'color':
+            sectionTitle.textContent = 'Color Palette';
+            colorSection.style.display = 'block';
+            break;
+          case 'accessories':
+            sectionTitle.textContent = 'Accessories & Lighting';
+            accessoriesSection.style.display = 'block';
+            break;
+          case 'preview':
+            sectionTitle.textContent = '3D Preview';
+            preview3dSection.style.display = 'block';
+            update3dPreviewSummary();
+            break;
+          default:
+            sectionTitle.textContent = 'Room Dimensions';
+            dimensionsSection.style.display = 'block';
+        }
+      }
+
+      function update3dPreviewSummary() {
+        // Update dimensions
+        const width = widthInput.value || 0;
+        const length = lengthInput.value || 0;
+        const height = heightInput.value || 0;
+        summaryDimensions.textContent = `${width}' × ${length}' × ${height}'`;
+        
+        // Update style
+        summaryStyle.textContent = selectedStyle || 'Not selected';
+        
+        // Update colors
+        wallsSummary.textContent = `Walls: ${selectedColors.walls?.name || 'Not selected'}`;
+        floorSummary.textContent = `Floor: ${selectedColors.floor?.name || 'Not selected'}`;
+        ceilingSummary.textContent = `Ceiling: ${selectedColors.ceiling?.name || 'Not selected'}`;
+        
+        // Update counts
+        furnitureCount.textContent = `${furnitureItems.length} ${furnitureItems.length === 1 ? 'piece' : 'pieces'}`;
+        accessoriesCount.textContent = `${selectedAccessories.length} ${selectedAccessories.length === 1 ? 'item' : 'items'}`;
+      }
+
+      function saveProject() {
+        const width = widthInput.value;
+        const length = lengthInput.value;
+        const height = heightInput.value;
+        const style = selectedStyle || 'not selected';
+        const items = furnitureItems.length;
+        const colors = selectedColors;
+        const accessories = selectedAccessories;
+        
+        alert(`Project saved with:\nDimensions: ${width}' × ${length}' × ${height}'\nStyle: ${style}\nFurniture Items: ${items}\nAccessories: ${accessories.join(', ') || 'none'}\nColors: ${JSON.stringify(colors)}`);
+      }
+
+      function previewProject() {
+        const style = selectedStyle || 'not selected';
+        alert(`Generating preview with ${style} style, ${furnitureItems.length} furniture items, ${selectedAccessories.length} accessories, and selected colors`);
+      }
+    });
+  </script>
+</body>
+</html>

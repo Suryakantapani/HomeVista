@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - HomeVista</title>
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo"><span class="home">Home</span><span class="vista">Vista</span></div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Explore.html">Explore</a></li>
+          <li><a href="Design.html">Design</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <button class="nav-buttons" class="login">Login</button>
+          <button class="nav-buttons" class="signup">Sign Up</button>
+        </ul>
+      </div>
+      <!-- Removed the duplicate desktop navigation elements -->
+    </nav>
+    <div class="hero-content">
+      <h1>Our Services</h1>
+      <p>Transform your space with our professional interior design services tailored to your style and budget.</p>
+      <button class="cta-button" id="bookConsultationBtn">Book a Free Consultation</button>
+    </div>
+  </header>
+
+  <!-- [Rest of the HTML content remains exactly the same] -->
+
+  <script>
+    // [JavaScript code remains exactly the same]
+  </script>
+  </header>
+
+  <section class="packages">
+    <h2>Interior Consultation Packages</h2>
+    <div class="package-list">
+      <div class="package-card">
+        <h3>Basic Consultation</h3>
+        <p>Perfect for single rooms or small spaces. Includes initial consultation and basic design recommendations.</p>
+        <h4>₹15,999</h4>
+        <ul>
+          <li>One-time consultation</li>
+          <li>Moodboard</li>
+          <li>Product recommendations</li>
+          <li>Color palette suggestions</li>
+        </ul>
+        <button class="select-package-btn" data-package="Basic Consultation">Select Package</button>
+      </div>
+      <div class="package-card">
+        <h3>Premium Design</h3>
+        <p>Comprehensive design solutions for entire homes or larger spaces. Includes 3D visualization and multiple revisions.</p>
+        <h4>₹24,999</h4>
+        <ul>
+          <li>3 revision cycles</li>
+          <li>3D visualization</li>
+          <li>Furniture layout</li>
+          <li>Material specifications</li>
+          <li>Vendor coordination</li>
+        </ul>
+        <button class="select-package-btn" data-package="Premium Design">Select Package</button>
+      </div>
+      <div class="package-card">
+        <h3>Luxury Makeover</h3>
+        <p>End-to-end design and execution service for premium homes. Includes project management and custom furnishings.</p>
+        <h4>₹49,999+</h4>
+        <ul>
+          <li>Full project management</li>
+          <li>Custom furniture design</li>
+          <li>Material procurement</li>
+          <li>On-site supervision</li>
+          <li>Post-installation support</li>
+        </ul>
+        <button class="select-package-btn" data-package="Luxury Makeover">Select Package</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="specialized-services">
+    <h2>Specialized Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Modular Kitchen</h3>
+        <p>Custom kitchen solutions with quality materials and efficient space utilization.</p>
+        <button class="learn-more-btn" data-service="Modular Kitchen">Learn More</button>
+      </div>
+      <div class="service-card">
+        <h3>Bathroom Remodelling</h3>
+        <p>Transform your bathroom with modern fixtures, tiles, and storage solutions.</p>
+        <button class="learn-more-btn" data-service="Bathroom Remodelling">Learn More</button>
+      </div>
+      <div class="service-card">
+        <h3>Office Spaces</h3>
+        <p>Professional designs for corporate environments, balancing functionality and aesthetics.</p>
+        <button class="learn-more-btn" data-service="Office Spaces">Learn More</button>
+      </div>
+      <div class="service-card">
+        <h3>Vastu Consultation</h3>
+        <p>Design aligned with traditional Vastu principles for harmony and positive energy.</p>
+        <button class="learn-more-btn" data-service="Vastu Consultation">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <h2>Our Partner Brands</h2>
+    <div class="brand-list">
+      <span>Asian Paints</span>
+      <span>Pepperfry</span>
+      <span>Godrej Interio</span>
+      <span>IKEA</span>
+      <span>Urban Ladder</span>
+      <span>HomeLane</span>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <h4>Rahul Sharma</h4>
+        <p>Project: Home Renovation</p>
+        <q>HomeVista transformed my space beyond my expectations. The designers understood my vision perfectly and delivered exceptional results within my budget.</q>
+      </div>
+      <div class="testimonial">
+        <h4>Priya Patel</h4>
+        <p>Project: Kitchen Design</p>
+        <q>The kitchen redesign was completed on time and within budget. The team was professional and creative throughout the process.</q>
+      </div>
+      <div class="testimonial">
+        <h4>Anil Gupta</h4>
+        <p>Project: Office Interiors</p>
+        <q>Our new office space has received countless compliments. HomeVista created a perfect balance of professionalism and comfort.</q>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Modal -->
+  <div id="consultationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Book a Free Consultation</h2>
+      <form id="consultationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="">Select a service</option>
+            <option value="Basic Consultation">Basic Consultation</option>
+            <option value="Premium Design">Premium Design</option>
+            <option value="Luxury Makeover">Luxury Makeover</option>
+            <option value="Modular Kitchen">Modular Kitchen</option>
+            <option value="Bathroom Remodelling">Bathroom Remodelling</option>
+            <option value="Office Spaces">Office Spaces</option>
+            <option value="Vastu Consultation">Vastu Consultation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Information</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Service Detail Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="serviceModalTitle">Service Details</h2>
+      <div id="serviceModalContent">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification" id="notification"></div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // Modal functionality
+    const consultationModal = document.getElementById('consultationModal');
+    const bookConsultationBtn = document.getElementById('bookConsultationBtn');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const consultationForm = document.getElementById('consultationForm');
+    const notification = document.getElementById('notification');
+    
+    // Open consultation modal
+    bookConsultationBtn.addEventListener('click', () => {
+      consultationModal.style.display = 'block';
+    });
+    
+    // Package selection buttons
+    const packageButtons = document.querySelectorAll('.select-package-btn');
+    packageButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const package = button.getAttribute('data-package');
+        document.getElementById('service').value = package;
+        consultationModal.style.display = 'block';
+      });
+    });
+    
+    // Learn more buttons
+    const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+    const serviceModal = document.getElementById('serviceModal');
+    const serviceModalTitle = document.getElementById('serviceModalTitle');
+    const serviceModalContent = document.getElementById('serviceModalContent');
+    
+    // Service details data
+    const serviceDetails = {
+      "Modular Kitchen": {
+        description: "Our modular kitchen solutions are designed to maximize space efficiency while maintaining aesthetic appeal. We use high-quality materials that are durable and easy to maintain.",
+        features: [
+          "Custom-designed cabinets and storage solutions",
+          "Premium countertop materials (granite, quartz, etc.)",
+          "Ergonomic design for efficient workflow",
+          "Modern appliances integration",
+          "Lighting solutions for functionality and ambiance"
+        ],
+        process: "Our process includes consultation, design, 3D visualization, material selection, and professional installation."
+      },
+      "Bathroom Remodelling": {
+        description: "Transform your bathroom into a luxurious retreat with our remodeling services. We combine functionality with spa-like aesthetics.",
+        features: [
+          "Modern fixtures and fittings",
+          "Tile and flooring options",
+          "Smart storage solutions",
+          "Lighting and ventilation planning",
+          "Water-efficient plumbing"
+        ],
+        process: "We handle everything from design to demolition and installation, with minimal disruption to your daily life."
+      },
+      "Office Spaces": {
+        description: "Create productive and inspiring work environments with our office interior solutions. We balance professionalism with employee comfort.",
+        features: [
+          "Space planning for optimal workflow",
+          "Ergonomic furniture solutions",
+          "Meeting and collaboration spaces",
+          "Brand-consistent design elements",
+          "Acoustic considerations"
+        ],
+        process: "Our team works closely with your leadership to understand your company culture and operational needs."
+      },
+      "Vastu Consultation": {
+        description: "Align your space with traditional Vastu principles to promote harmony, prosperity, and positive energy flow.",
+        features: [
+          "Comprehensive space analysis",
+          "Recommendations for optimal room placement",
+          "Color and material guidance",
+          "Remedial solutions for existing spaces",
+          "Balancing the five elements"
+        ],
+        process: "Our Vastu experts combine ancient wisdom with modern design principles for spaces that feel right."
+      }
+    };
+    
+    learnMoreButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const service = button.getAttribute('data-service');
+        const details = serviceDetails[service];
+        
+        if (details) {
+          serviceModalTitle.textContent = service;
+          
+          let contentHTML = `
+            <p><strong>Description:</strong> ${details.description}</p>
+            <h3>Key Features:</h3>
+            <ul>
+              ${details.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+            <h3>Our Process:</h3>
+            <p>${details.process}</p>
+            <button class="submit-btn" id="bookServiceBtn" style="margin-top: 20px;">Book This Service</button>
+          `;
+          
+          serviceModalContent.innerHTML = contentHTML;
+          serviceModal.style.display = 'block';
+          
+          // Add event listener to the dynamically created button
+          document.getElementById('bookServiceBtn')?.addEventListener('click', () => {
+            serviceModal.style.display = 'none';
+            document.getElementById('service').value = service;
+            consultationModal.style.display = 'block';
+          });
+        }
+      });
+    });
+    
+    // Close modals
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        consultationModal.style.display = 'none';
+        serviceModal.style.display = 'none';
+      });
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === consultationModal) {
+        consultationModal.style.display = 'none';
+      }
+      if (e.target === serviceModal) {
+        serviceModal.style.display = 'none';
+      }
+    });
+    
+    // Form submission
+    consultationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // In a real application, you would send this data to a server
+      const formData = new FormData(consultationForm);
+      const data = Object.fromEntries(formData.entries());
+      
+      console.log('Form submitted:', data);
+      
+      // Show notification
+      notification.textContent = 'Thank you! We will contact you shortly to schedule your consultation.';
+      notification.style.display = 'block';
+      notification.style.backgroundColor = '#4CAF50';
+      
+      // Hide modal
+      consultationModal.style.display = 'none';
+      
+      // Reset form
+      consultationForm.reset();
+      
+      // Hide notification after 5 seconds
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 5000);
+    });
+    
+    // Login/Signup buttons (placeholder functionality)
+    const loginButtons = document.querySelectorAll('.login');
+    const signupButtons = document.querySelectorAll('.signup');
+    
+    loginButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        notification.textContent = 'Login feature will be implemented soon!';
+        notification.style.display = 'block';
+        notification.style.backgroundColor = '#2196F3';
+        
+        setTimeout(() => {
+          notification.style.display = 'none';
+        }, 3000);
+      });
+    });
+    
+    signupButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        notification.textContent = 'Signup feature will be implemented soon!';
+        notification.style.display = 'block';
+        notification.style.backgroundColor = '#2196F3';
+        
+        setTimeout(() => {
+          notification.style.display = 'none';
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>
