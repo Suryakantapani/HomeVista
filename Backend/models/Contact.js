@@ -6,7 +6,7 @@ const contactSchema = new mongoose.Schema({
   phone: String,
   service: String,
   message: String,
-  filePath: String, // store path if file is uploaded
+  filePath: String,  
   createdAt: {
     type: Date,
     default: Date.now
