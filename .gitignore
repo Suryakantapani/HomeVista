@@ -1,0 +1,30 @@
+# 🚀 Node.js & Backend Ignore List
+# Ignore dependencies
+node_modules/
+
+# Ignore environment variables (API keys, DB credentials)
+.env
+
+# Ignore logs & debug files
+logs/
+*.log
+npm-debug.log
+yarn-error.log
+
+# Ignore cache & build files
+dist/
+build/
+.cache/
+
+# Ignore system/IDE files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Ignore database files
+*.sqlite
+*.db
+
+# Ignore lock files (optional)
+package-lock.json
+yarn.lock
